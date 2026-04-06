@@ -3,9 +3,9 @@ import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 import { NextRequest } from "next/server";
 
-const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "development-secret-key"
-);
+const jwtSecret = process.env.JWT_SECRET;
+if (!jwtSecret) throw new Error("JWT_SECRET environment variable is required");
+const JWT_SECRET = new TextEncoder().encode(jwtSecret);
 
 const COOKIE_NAME = "auth-token";
 
