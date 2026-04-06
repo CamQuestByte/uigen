@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="uigen">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/uigen.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
